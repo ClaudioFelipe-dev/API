@@ -19,7 +19,7 @@ conn();
 // Routes
 const Routes = require("./routes/router");
 
-app.use("/api-pwa", Routes);
+app.use("https://api-1-wjn8.onrender.com", Routes);
 
 app.listen(3000, function () {
   console.log("Servidor Oline!!"); //start server
