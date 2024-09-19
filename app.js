@@ -2,9 +2,7 @@ const express = require("express"); //import express to file
 const cors = require("cors");
 const app = express(); //application settings
 
-app.use(cors({
-  origin: 'https://url-do-seu-frontend.com', // Permita o domínio do seu frontend
-}));
+app.use(cors());
 
 
 app.use(express.json());
@@ -19,7 +17,7 @@ conn();
 // Routes
 const Routes = require("./routes/router");
 
-app.use("https://api-1-wjn8.onrender.com", Routes);
+app.use("/api-pwa", Routes);
 
 app.listen(3000, function () {
   console.log("Servidor Oline!!"); //start server
