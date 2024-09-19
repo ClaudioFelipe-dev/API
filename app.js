@@ -2,7 +2,10 @@ const express = require("express"); //import express to file
 const cors = require("cors");
 const app = express(); //application settings
 
-app.use(cors()); //active cors in the aplication
+app.use(cors({
+  origin: 'https://url-do-seu-frontend.com', // Permita o domínio do seu frontend
+}));
+
 
 app.use(express.json());
 
